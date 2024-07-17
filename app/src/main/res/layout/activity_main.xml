@@ -58,15 +58,7 @@
         android:layout_marginTop="20dp"
         />
 
-    <ImageView
-        android:id="@+id/Block"
-        android:layout_width="67dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/FlightText"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
 
-        android:src="@drawable/block" />
 
 
     <TextView
@@ -85,22 +77,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/SpaceStationText"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="-10dp"
         android:layout_toStartOf="@+id/Block"
         android:background="#2196F3"
         android:text="DCA  "
+        android:textColor="#000000"
         android:textSize="45sp" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="146dp"
+        android:layout_height="58dp"
         android:layout_below="@+id/RecoverText"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginStart="-17dp"
+        android:layout_marginTop="33dp"
         android:layout_toEndOf="@+id/Block"
         android:background="#3DDA43"
-        android:text="@string/mars"
+        android:text="  MARS"
+        android:textColor="#000000"
         android:textSize="45sp" />
 
     <Switch
@@ -127,6 +121,15 @@
         android:layout_marginBottom="266dp"
         android:text="@string/traveller"
         android:textSize="30sp" />
+    <ImageView
+        android:id="@+id/Block"
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/FlightText"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+
+        android:src="@drawable/block" />
 
     <Button
         android:id="@+id/button"
