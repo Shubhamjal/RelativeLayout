@@ -10,42 +10,43 @@
 
     <ImageView
         android:id="@+id/SpaceStation"
-        app:srcCompat="@drawable/spacestation"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="50sp"
-        android:layout_marginStart="50sp"
         android:layout_alignParentTop="true"
-       />
+        android:layout_marginStart="50sp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:layout_toStartOf="@+id/Flight"
+        app:srcCompat="@drawable/spacestation" />
+
     <ImageView
         android:id="@+id/Flight"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/flight"
-        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="50sp"
-        />
+        android:layout_centerInParent="true"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/flight" />
+
     <ImageView
         android:id="@+id/Recover"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/recover"
-        android:layout_marginEnd="50dp"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        />
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@+id/Flight"
+        android:src="@drawable/recover" />
 
     <TextView
         android:id="@+id/SpaceStationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/SpaceStation"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="false"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="55dp"
+        android:layout_toStartOf="@+id/FlightText"
         android:text="@string/SpaceStation" />
     <TextView
         android:id="@+id/FlightText"
@@ -56,67 +57,85 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
         />
+
+    <ImageView
+        android:id="@+id/Block"
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/FlightText"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+
+        android:src="@drawable/block" />
+
+
     <TextView
         android:id="@+id/RecoverText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/recover"
         android:layout_below="@+id/Recover"
+        android:layout_marginStart="87dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:layout_alignParentEnd="true"
-        />
-    <ImageView
-        android:id="@+id/Block"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/block"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/FlightText"
-        android:layout_marginTop="30dp"
-        />
+        android:layout_toEndOf="@+id/FlightText"
+        android:text="@string/recover" />
+
+
     <TextView
         android:id="@+id/DCA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="50dp"
         android:layout_below="@+id/SpaceStationText"
-        android:layout_marginTop="30dp"
-        android:text="@string/dca"
-        android:textSize="50sp"
-        />
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toStartOf="@+id/Block"
+        android:background="#2196F3"
+        android:text="DCA  "
+        android:textSize="45sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:text="@string/mars"
-        android:textSize="50sp"
         android:layout_below="@+id/RecoverText"
-        android:layout_marginTop="30sp"
-        android:layout_marginEnd="20dp"
-        />
-
-
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="34dp"
+        android:layout_toEndOf="@+id/Block"
+        android:background="#3DDA43"
+        android:text="@string/mars"
+        android:textSize="45sp" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:text="@string/one_way"
         android:layout_below="@+id/DCA"
-        android:textSize="30sp"
-        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="197dp"
+        android:text="@string/one_way"
+        android:textSize="30sp"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
         android:layout_below="@+id/switch1"
-        android:text="@string/traveller"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="50dp"
-        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="266dp"
+        android:text="@string/traveller"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
         />
 
 
