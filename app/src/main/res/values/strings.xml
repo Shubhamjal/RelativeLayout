@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RelativeLayout</string>
+    <string name="SpaceStation">SpaceStation</string>
+    <string name="flight">Flight</string>
+    <string name="recover">Recover</string>
+    <string name="dca">DCA</string>
+    <string name="mars">MARS</string>
+    <string name="traveller">Traveller</string>
+    <string name="one_way">One Way</string>
+   </resources>

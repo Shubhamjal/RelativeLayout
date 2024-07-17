@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/SpaceStation"
+        app:srcCompat="@drawable/spacestation"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50sp"
+        android:layout_marginStart="50sp"
+        android:layout_alignParentTop="true"
+       />
+    <ImageView
+        android:id="@+id/Flight"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/flight"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50sp"
+        />
+    <ImageView
+        android:id="@+id/Recover"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/recover"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <TextView
+        android:id="@+id/SpaceStationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SpaceStation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/SpaceStation" />
+    <TextView
+        android:id="@+id/FlightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Flight"
+        android:text="@string/flight"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/RecoverText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recover"
+        android:layout_below="@+id/Recover"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_alignParentEnd="true"
+        />
+    <ImageView
+        android:id="@+id/Block"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/block"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/FlightText"
+        android:layout_marginTop="30dp"
+        />
+    <TextView
+        android:id="@+id/DCA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_below="@+id/SpaceStationText"
+        android:layout_marginTop="30dp"
+        android:text="@string/dca"
+        android:textSize="50sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:text="@string/mars"
+        android:textSize="50sp"
+        android:layout_below="@+id/RecoverText"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="20dp"
+        />
+
+
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="@string/one_way"
+        android:layout_below="@+id/DCA"
+        android:textSize="30sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch1"
+        android:text="@string/traveller"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="50dp"
+        android:textSize="30sp"
+        />
+
+
+</RelativeLayout>
