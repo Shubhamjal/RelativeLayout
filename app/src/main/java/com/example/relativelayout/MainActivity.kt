@@ -1,5 +1,6 @@
 package com.example.relativelayout
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     var num=0.0f
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -30,17 +32,15 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        btn=findViewById(R.id.button)
-        btn?.setOnClickListener{
-          val  Internt=Intent(this,SecondActivity::class.java)
-           startActivity(Internt)
 
+            btn=findViewById(R.id.button)
             btn1=findViewById(R.id.btnadd)
             btn2=findViewById(R.id.btnsub)
             btn3=findViewById(R.id.btnmultiply)
             btn4=findViewById(R.id.btndivide)
-            text=findViewById(R.id.TextBox)
 
+
+            text=findViewById(R.id.TextBox)
 
             btn1?.setOnClickListener{
                 num+=2
@@ -63,6 +63,9 @@ class MainActivity : AppCompatActivity() {
             }
 
 
+        btn?.setOnClickListener{
+            val  Internt=Intent(this,SecondActivity::class.java)
+            startActivity(Internt)
 
         }
     }
