@@ -3,6 +3,7 @@ package com.example.relativelayout
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +12,15 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
 
     var btn:Button?=null
+    var btn1:Button?=null
+    var btn2:Button?=null
+    var btn3:Button?=null
+    var btn4:Button?=null
+    var text:TextView?=null
+
+    var num=0.0f
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -24,8 +34,36 @@ class MainActivity : AppCompatActivity() {
         btn?.setOnClickListener{
           val  Internt=Intent(this,SecondActivity::class.java)
            startActivity(Internt)
+
+            btn1=findViewById(R.id.btnadd)
+            btn2=findViewById(R.id.btnsub)
+            btn3=findViewById(R.id.btnmultiply)
+            btn4=findViewById(R.id.btndivide)
+            text=findViewById(R.id.TextBox)
+
+
+            btn1?.setOnClickListener{
+                num+=2
+                text?.setText(num.toString())
+            }
+            btn2?.setOnClickListener{
+                num-=2
+                if(num<0){
+                    num=0.0f
+                }
+                text?.setText(num.toString())
+            }
+            btn3?.setOnClickListener{
+                num*=num
+                text?.setText(num.toString())
+            }
+            btn4?.setOnClickListener{
+                num/=2
+                text?.setText(num.toString())
+            }
+
+
+
         }
-
-
     }
 }
